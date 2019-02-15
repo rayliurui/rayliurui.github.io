@@ -115,7 +115,7 @@
             font-family: monospace;
         }
     </style>
-     <script src="echarts.js"></script>
+     
 </head>
 
 <body>
@@ -189,8 +189,8 @@
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
  
        <script type="text/javascript">
-var dom = document.getElementById("container");
-var myChart = echarts.init(dom);
+
+var myChart = echarts.init(document.getElementById("container"));
 var app = {};
 option = null;
 var dataBJ = [
