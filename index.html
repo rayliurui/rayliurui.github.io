@@ -73,6 +73,8 @@
             font-size: 0.85em;
         }
         
+       
+
         h2 {
             border-bottom: 1px solid #ccc;
             margin-top: 2em
@@ -85,10 +87,11 @@
         
         cover-image h1 {
             position: absolute;
-            top: 0;
+            top: 50;
             left: 0;
             right: 0;
-            color: #eee;
+            color: #fff;
+            font-family: "Times New Roman";
             text-align: center;
         }
         
@@ -98,6 +101,7 @@
             left: 0;
             right: 0;
             color: black;
+            font-family: "Times New Roman";
             text-align: center;
             padding: 10px;
             opacity: 0.6;
@@ -115,7 +119,7 @@
 
 <body>
     <cover-image>
-        <img src="images/green.jpg" alt="cover photo">
+        <img src="images/cover.jpg" alt="cover photo">
         <h1>
             Chinese IP drama
         </h1>
@@ -123,195 +127,496 @@
             <em>By</em>
             <br>
             <strong>
-                Pili Hu, VSCode and GitHub
+                Pili Hu, Ray Liu, VSCode and GitHub
             </strong>
         </author-block>
     </cover-image>
 
-    <p>This is a simplist solution to a mobile-only web story. Users with no coding background should be able to use this template after a 10 minute crash course on HTML. One does not need to learn CSS, in order to make it work in a reasonable way.</p>
+    <p>Today <strong>IP drama</strong> accounts for a huge part in people's entertainment choices. </p>
 
-    <h2> Features </h2>
+    <p><strong>IP drama</strong> which refers to drama adapted from novels, games and animates as well as drama being remade, is not a new term, but popular again due to the increasing IP market.</p>
 
-    <p>
-        "Big Road" has the following key features:
+    <center><iframe width="350" height="197" src="https://www.youtube.com/embed/6QVi-SU5UZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+    <center style="text-align: center; font-size: 3px">Chinese IP Drama in 2018</center>
+
+    <h2> Process </h2>
+
+    <p>We processed the data according to the following steps:</p>
+
+    <ol>
+        <li>Collecting from <a href="http://dsj.sarft.gov.cn/index.shanty">National Radio and Television Administration (NRTA) webisite</a> and <a href="https://movie.douban.com/tv/#!type=tv&tag=%E7%83%AD%E9%97%A8&sort=recommend&page_limit=20&page_start=0">Douban.com</a></li> 
+        <li>Cleaning</li>
+        <li>Transforming and summarizing</li>
+    </ol>
+
+    <h2> Content </h2>
+
+    <p>It is of people's interest and need to make a data analysis on Chinese IP drama in recent years. We focus on two aspects:
+        
     </p>
 
     <ul>
-        <li>
-            <strong>HTML only</strong> -- Actually, you don't need to learn HTML. Just get the code of current page and modify it.
-        </li>
-        <li>Sensible default style.</li>
-        <li>Common elements:
-            <code>p, em, strong</code>
-        </li>
-        <li>Snippet for responsive embedding of interactive charts, via <code>iframe</code></li>
+        <li>Quantity </li>
+        <li>Quality</li>
+        
     </ul>
 
-    <h2> Getting started </h2>
+    
 
-    <p>Make your first web story in three steps:</p>
+    <h3>Quantity</h3>
 
-    <ol>
-        <li>Fork this repository</li>
-        <li>Modify <code>index.html</code> to include your content</li>
-        <li>
-            Your web story is available on <code>username.github.io/big-road/</code>. For example this current page is available at <a href="hupili.github.io/big-road/">hupili.github.io/big-road/</a>. Checkout
-            <a href="https://github.com/hupili/python-for-data-and-media-communication-gitbook/blob/master/notes-week-00.md#github-pages">this page</a> for more information about hosting on GitHub Pages.
-        </li>
-    </ol>
-
-    <h2>Demo of supported elements for your article</h2>
+    <img src="images/quantity.jpg" alt="">
 
     <p>
-        You have already seen headings (<code>h1</code>, <code>h2</code>, <code>h3</code>), listings (<code>ul</code>, <code>ol</code>, <code>li</code>), and paragraph (<code>p</code>) in previous codes. In this section, we show you several other useful
-        elements.
+        Though the number of all drama got down, IP drama plays an increasingly huge part
     </p>
 
-    <h3>Highlight texts in a paragraph</h3>
+    <h3>Quality</h3>
 
-    <p>
-        In a pragraph, there may be some key information that you want to highlight. In HTML, we have two basic semantic tags for this purpose. You can <em>emphasize something</em> , or <strong>strongly emphasize something</strong>. The difference here
-        is subtle and the choice depends on the author.
-    </p>
 
-    <h3>Image with caption</h3>
 
-    <figure>
-        <img src="images/screenshot-demo.png" alt="">
-        <figcaption>
-            <em> How "Big Road" looks like on mobile phone.</em>
-            <br> Source: screenshot
-        </figcaption>
-    </figure>
+   <div id="container" style="width: 500px;height:300px;" align="center"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var dataBJ = [
+  
+[7.4,   2016,   "新婚公寓"],
+[3.8,   2016,   "刘海戏金蟾/ 宝珠奇缘"],
+[4.6,   2016,   "寂寞空庭春欲晚"],
+[5.4,   2016,   "青丘狐传说"],
+[5.9,   2016,   "新萧十一郎"],
+[5.8,   2016,   "五鼠闹东京"],
+[4.8,   2016,   "一念向北"],
+[6.5,   2016,   "因为爱情有幸福"],
+[4.4,   2016,   "真命天子"],
+[4.6,   2016,   "头号前妻"],
+[4.1,   2016,   "爱的阶梯"],
+[7, 2016,   "十五年等待候鸟"],
+[3.4,   2016,   "山海经之赤影传说"],
+[8.8,   2016,   "最好的我们"],
+[5.6,   2016,   "致单身男女"],
+[5.5,   2016,   "我是杜拉拉"],
+[7.3,   2016,   "欢乐颂"],
+[7.6,   2016,   "我的奇妙男友"],
+[6.7,   2016,   "四千金"],
+[3.7,   2016,   "仙剑云之凡"],
+[5.1,   2016,   "亲爱的翻译官"],
+[5.9,   2016,   "老九门"],
+[5.8,   2016,   "致青春"],
+[6.2,   2016,   "新边城浪子"],
+[4.7,   2016,   "旋风少女第二季"],
+[5.9,   2016,   "秀丽江山之长歌行"],
+[8.5,   2016,   "遇见王沥川"],
+[3.2,   2016,   "幻城"],
+[5.9,   2016,   "你好乔安"],
+[5.3,   2016,   "青云志"],
+[7.8,   2016,   "小别离"],
+[5.5,   2016,   "结婚为什么"],
+[6.5,   2016,   "微微一笑很倾城"],
+[6, 2016,   "兰陵王妃"],
+[7.2,   2016,   "如果蜗牛有爱情"],
+[4.7,   2016,   "锦绣未央"],
+[4.2,   2016,   "极品家丁"],
+[3.4,   2016,   "美人私房菜之玉蝶传奇"],
+[6.8,   2016,   "飞刀又见飞刀"],
+[4.4,   2016,   "青云志Ⅱ"],
+[5.5,   2016,   "寒山令"],
+[5, 2016,   "陆军一号"],
+[3.8,   2016,   "暗战危城"],
+[7.6,   2016,   "生命中的好日子"],
+[4, 2016,   "硬骨头"],
+[4.4,   2016,   "我们的纯真年代"],
+[7.4,   2016,   "代号"],
+[8.8,   2016,   "生活有点甜"],
+[7.1,   2016,   "爱的追踪"],
+[8.3,   2016,   "龙器"],
+[4.4,   2016,   "最后的战士"],
+[4, 2016,   "铁血军魂"],
+[3.4,   2016,   "怒江之战"],
+[4.7,   2016,   "解密"],
+[8.4,   2016,   "海棠依旧"],
+[4.3,   2016,   "豆娘"],
+[6.3,   2016,   "麻雀"],
+[8.2,   2016,   "好家伙"],
+[7.2,   2016,   "红星照耀中国"],
 
-    <figure>
-        <img src="images/screenshot-demo.png" alt="">
-        <figcaption>
-            Sometimes, the caption can be very long which is a standalone story by itself. So you don't have to put the entire block into emphasis mode. Just <em>emaphsize the part you find most important</em>.
-        </figcaption>
-    </figure>
+[6.1,   2016,   "国家底线"],
+[2.9,   2017,   "漂亮的李慧珍"],
+[3, 2017,   "孤芳不自赏"],
+[4.9,   2017,   "不得不爱"],
+[3.8,   2017,   "遇见爱情的利先生"],
+[7.9,   2017,   "射雕英雄传"],
+[7, 2017,   "大唐荣耀"],
+[6.4,   2017,   "三生三世十里桃花"],
+[3.3,   2017,   "那片星空那片海"],
+[8.5,   2017,   "大秦帝国之崛起"],
+[4.6,   2017,   "约会恋爱究竟是什么"],
+[4.8,   2017,   "因为遇见你"],
+[6.4,   2017,   "大唐荣耀2"],
+[6.8,   2017,   "狐狸的夏天"],
+[4.1,   2017,   "择天记"],
+[4.6,   2017,   "繁星四月"],
+[3.8,   2017,   "求婚大作战"],
+[5.3,   2017,   "欢乐颂2"],
+[7.1,   2017,   "天使的幸福"],
+[5, 2017,   "楚乔传"],
+[4, 2017,   "逆袭之星途璀璨"],
+[4.4,   2017,   "夏至未至"],
+[4.2,   2017,   "一粒红尘"],
+[2.8,   2017,   "深夜食堂"],
+[3.2,   2017,   "上古情歌"],
+[4, 2017,   "风光大嫁"],
+[6, 2017,   "华丽上班族"],
+[6.3,   2017,   "我的前半生"],
+[3.9,   2017,   "新侠客行"],
+[5.7,   2017,   "醉玲珑"],
+[6.6,   2017,   "开封府传奇"],
+[6.2,   2017,   "春风十里，不如你"],
+[5.5,   2017,   "浪花一朵朵"],
+[4.2,   2017,   "轩辕剑之汉之云"],
+[4.8,   2017,   "暖爱"],
+[4.5,   2017,   "秦时丽人明月心"],
+[4.6,   2017,   "盲约"],
+[5.3,   2017,   "青春最好时"],
+[3.7,   2017,   "何所冬暖，何所夏凉"],
+[4.1,   2017,   "天泪传奇之凤凰无双"],
+[7, 2017,   "蔚蓝50米"],
+[5.3,   2017,   "将军在上"],
+[4, 2017,   "路从今夜白之遇见青春"],
+[8.6,   2017,   "你好，旧时光"],
+[7.1,   2017,   "可惜不是你"],
+[5.2,   2017,   "特化师"],
+[6.8,   2017,   "海上牧云记"],
+[5.8,   2017,   "我不是精英"],
+[2.5,   2017,   "极光之恋"],
+[6.2,   2017,   "亲爱的她们"],
+[6.6,   2017,   "剃刀边缘"],
 
-    <p>Note, an image aspect ratio of 16:9 is recommended as a sensible default.</p>
+[8.8,   2017,   "白鹿原"],
+[6.2,   2017,   "林海雪原"],
+[7.5,   2017,   "警察锅哥"],
+[4.1,   2017,   "苦乐村官"],
+[8, 2017,   "啊，父老乡亲"],
+[7.1,   2018,   "我的青春遇见你"],
+[3.5,   2018,   "凤囚凰"],
+[3.8,   2018,   "我站在桥上看风景"],
+[4.5,   2018,   "一路繁花相送"],
+[6.5,   2018,   "飘香剑雨"],
+[4.3,   2018,   "柜中美人"],
+[7.5,   2018,   "单恋大作战"],
+[2.6,   2018,   "新笑傲江湖"],
+[5.9,   2018,   "烈火如歌"],
+[6.3,   2018,   "人生若如初相见"],
+[5.3,   2018,   "南方有乔木"],
+[6.5,   2018,   "潜龙在渊"],
+[7.1,   2018,   "金牌投资人"],
 
-    <h3>Responsive video embedding</h3>
+[4.8,   2018,   "温暖的弦"],
+[3.1,   2018,   "莽荒纪"],
+[4.7,   2018,   "扶摇"],
+[7.2,   2018,   "为了你我愿意热爱整个世界"],
+[6.2,   2018,   "重返二十岁"],
+[3.2,   2018,   "流星花园"],
+[7.8,   2018,   "香蜜沉沉烬如霜"],
+[5.3,   2018,   "爱情进化论"],
+[8.2,   2018,   "天盛长歌"],
+[7.7,   2018,   "夜天子"],
+[7.4,   2018,   "如懿传"],
 
-    <p>Embedding videos in a responsive manner is always a pain. The conventional technique is to embed by <code>iframe</code>. You need to specify the width and height of the iframe, making it non-responsive to different screens.</p>
+[4.6,   2018,   "斗破苍穹"],
+[6.2,   2018,   "许你浮生若梦"],
+[5.1,   2018,   "凉生，我们可不可以不忧伤"],
+[6.5,   2018,   "橙红年代"],
+[3.7,   2018,   "创业时代"],
+[4.1,   2018,   "原来你还在这里"],
+[5.5,   2018,   "你和我的倾城时光"],
+[3.9,   2018,   "火王之破晓之战/火王之千里同风"],
+[5.2,   2018,   "大约是爱"],
+[7.6,   2018,   "知否知否应是绿肥红瘦"],
 
-    <p>Use Youtube as an example. You can copy the following code of
-        <a href="https://www.youtube.com/watch?v=qp0HIF3SfI4">this video</a> from its "Share --> Embed" button:
-    </p>
+[7.3,   2018,   "台湾往事"],
+[3.1,   2018,   "初婚"],
+[6.1,   2018,   "走火"],
+[8.1,   2018,   "灵与肉"],
+[6.6,   2018,   "你迟到的许多年"],
 
-    <p><code>
-        &#x3C;iframe width=&#x22;560&#x22; height=&#x22;315&#x22; src=&#x22;https://www.youtube.com/embed/qp0HIF3SfI4&#x22; frameborder=&#x22;0&#x22; allow=&#x22;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#x22; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;
-    </code></p>
+[7.4,   2018,   "那座城这家人"],
+[8.9,   2018,   "大江大河"],
 
-    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/qp0HIF3SfI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+];
 
-    <p>The default result is as follows:</p>
 
-    <figure>
-        <img src="images/responsive-embedding-video.png" alt="">
-        <figcaption>
-            Default iframe embedding is not responsive to the screen width. It is either too small or too big.
-        </figcaption>
-    </figure>
 
-    <p>
-        Following is one responsive video. You can check the source code of this page to see how it works. You don't have to completely understand the internal works. Simply subsituting the URL suffices.
-    </p>
 
-    <responsive-block>
-        <iframe src='https://www.youtube.com/embed/qp0HIF3SfI4' frameborder='0' allowfullscreen>
-        </iframe>
-    </responsive-block>
+var dataSH = [
+[5.8,   2016,   "苏染染追夫记"],
+[3.4,   2016,   "示铃录"],
+[4.7,   2016,   "都市妖奇谈"],
+[5.7,   2016,   "重生之名流巨星＊"],
+[4.2,   2016,   "女总裁的贴身高手第一季"],
+[8.2,   2016,   "余罪第一季＊"],
+[3.9,   2016,   "我的朋友陈白露小姐"],
+[7.3,   2016,   "余罪第二季＊"],
+[4.1,   2016,   "贴身校花"],
+[5.3,   2016,   "校园篮球风云"],
+[5.8,   2016,   "纳妾记第二季"],
+[7.4,   2016,   "若是如此"],
+[7.8,   2016,   "十宗罪"],
+[3.8,   2016,   "校花的贴身高手第二季"],
+[6.8,   2016,   "亲爱的，公主病"],
+[4.7,   2016,   "校花的贴身高手第三季"],
+[6, 2016,   "女娲成长日记"],
+[6, 2016,   "纳妾记第三季"],
+[7.4,   2016,   "识汝不识丁"],
+[5.2,   2016,   "校花的贴身高手第四季"],
+[6.6,   2016,   "别那么骄傲第一季"],
+[8.2,   2016,   "画江湖之不良人第一季"],
+[6.5,   2016,   "我不是妖怪"],
+[7, 2016,   "法医秦明"],
+[5.4,   2016,   "左眼诡事"],
+[5.9,   2016,   "美人为馅第一季"],
+[5.9,   2016,   "美人为馅第二季"],
+[3.4,   2016,   "藏地密码"],
 
-    <h3>Responsive interactive chart</h3>
+[6, 2016,   "画江湖之不良人第二季"],
+[3.8,   2016,   "恶作剧之吻"],
+[5.9,   2016,   "美人为馅第三季"],
+[4.5,   2016,   "明星志愿第一季"],
+[8, 2016,   "鬼吹灯之精绝古城"],
+[6.3,   2016,   "无间道第一季"],
+[4.5,   2017,   "明星志愿第二季"],
+[5.1,   2017,   "恶魔少爷别吻我第一季"],
+[6.5,   2017,   "别那么骄傲第二季"],
+[5, 2017,   "寻找前世之旅第一季"],
+[3.7,   2017,   "校花前传之很纯很暧昧"],
+[4.2,   2017,   "学院传说之三生三世桃花缘"],
+[6.6,   2017,   "我与你的光年距离"],
+[5.5,   2017,   "寻找前世之旅第二季"],
+[6.9,   2017,   "无间道第二季"],
+[3.3,   2017,   "幻城凡世"],
+[5.1,   2017,   "恶魔少爷别吻我第二季"],
+[6.3,   2017,   "愿有人陪你颠沛流离"],
+[6.3,   2017,   "无间道第三季"],
+[5.7,   2017,   "问题餐厅"],
+[6.3,   2017,   "鲜肉老师"],
+[4.7,   2017,   "秘果"],
+[7.9,   2017,   "花间提壶方大厨第一季"],
+[6, 2017,   "假凤虚凰第一季"],
+[7.9,   2017,   "花间提壶方大厨第二季"],
+[6.2,   2017,   "暗徒"],
+[6.3,   2017,   "那一场呼啸而过的青春"],
+[2.9,   2017,   "鬼吹灯之牧野诡事第一季"],
+[6.2,   2017,   "双世宠妃"],
+[8.2,   2017,   "河神"],
+[5.2,   2017,   "鬼吹灯之黄皮子坟"],
+[6, 2017,   "镇魂街"],
+[7.5,   2017,   "颤抖吧，阿部！"],
+[2.9,   2017,   "鬼吹灯之牧野诡事第二季"],
+[6.2,   2017,   "无心法师II"],
+[8.2,   2017,   "无证之罪"],
+[9.0,2017,"白夜追凶"],
+[6.7,   2017,   "班长大人第一季"],
+[6.7,   2017,   "班长大人第二季"],
+[6.5,   2017,   "开封奇谈"],
+[4, 2017,   "独步天下"],
+[4.4,   2017,   "推理笔记"],
+[7.2,   2017,   "致我们单纯的小美好"],
+[4.9,   2017,   "无法拥抱的你第一季"],
+[7.6,   2017,   "端脑"],
+[2.9,   2017,   "龙日一，你死定了第一季"],
+[5.4,   2017,   "柒个我"],
+[6.5,   2017,   "不负如来不负卿"],
+[6.6,   2017,   "艳骨"],
+[3.2,   2018,   "龙日一，你死定了第二季"],
+[3.5,   2018,   "国民老公"],
+[2.3,   2018,   "寻秦记"],
 
-    <p>With the wide spread tools today, you don't have to learn frontend technology in order to make interactive charts. For example, there are off-the-shelf online tools like
-        <a href="https://infogram.com/">infogram.com</a>,
-        <a href="https://www.datawrapper.de/">datawrapper</a>, and
-        <a href="https://flourish.studio/">flourish</a>.
-    </p>
+[4.9,   2018,   "无法拥抱的你第二季"],
+[7.3,   2018,   "超级小郎中第二季"],
+[3.9,   2018,   "冒险王卫斯理之支离人"],
+[6.3,   2018,   "北京女子图鉴"],
+[5.8,   2018,   "我才不会被女孩子欺负呢"],
+[8.3,   2018,   "忽而，今夏"],
+[6.4,   2018,   "萌妻食神"],
+[4.4,   2018,   "冒险王卫斯理之蓝血人"],
+[5.3,   2018,   "泡沫之夏"],
+[7.2,   2018,   "结爱·千岁大人的初恋"],
+[4.3,   2018,   "天意"],
+[5, 2018,   "冒险王卫斯理之无名发"],
+[6.7,   2018,   "上海女子图鉴"],
+[7.6,   2018,   "东方华尔街"],
+[6.8,   2018,   "想看你微笑"],
+[6.5,   2018,   "同学两亿岁"],
+[7, 2018,   "萌妃驾到"],
+[7.3,   2018,   "亲爱的活祖宗"],
+[6.4,   2018,   "镇魂"],
+[5.6,   2018,   "法医秦明2清道夫"],
+[6.5,   2018,   "芸汐传"],
+[7.5,   2018,   "S.C.I.谜案集"],
+[6.9,   2018,   "快把我哥带走"],
+[7.1,   2018,   "给我一个十八岁"],
+[5.7,   2018,   "古剑奇谭2"],
+[7.2,   2018,   "最亲爱的你"],
+[6.5,   2018,   "沙海"],
+[7.2,   2018,   "媚者无疆"],
+[4.6,   2018,   "武动乾坤之英雄出少年"],
+[6.1,   2018,   "惹上冷殿下"],
+[5.9,   2018,   "法医秦明之幸存者"],
+[7.7,   2018,   "天坑鹰猎"],
+[6.1,   2018,   "舌害"],
 
-    <p>
-        If you are Python developer, libraries like <code>plotly</code>, <code>pyecharts</code>, <code>bokeh</code>, and <code>folium</code> can help you generate interactive charts and maps within Python environment. Next question is how to embed those
-        interactive charts into your final work.
-    </p>
+[6.5,   2018,   "我在大理寺当宠物"],
 
-    <p>
-        The first thing is to use your chosen library/ online tool to export a standalone webpage that includes your chart. The webpage may come along with other auxiliary files like Javascript and CSS. You need to put those files all in one folder. Then use
-        your browser to visit the webpage and make sure the chart looks normal as a standalone project. After that, ou can apply the same technique used from above responsive Youtube video to embed it into your web story Just use the following code block
-        and replace the "src" attribute with the right path to your stand alone interactive chart.
-    </p>
+[7.1,   2018,   "降龙之白露为霜"],
+[6.7,   2018,   "双世宠妃2"],
+[5.3,   2018,   "唐砖"],
+[7.4,   2018,   "将夜"],
+[4.2,   2018,   "回到明朝当王爷之杨凌传"],
 
-    <p>
-        <code>&#x3C;responsive-block&#x3E;&#x3C;iframe src=&#x27;//server-name/path/to/the/file.html&#x27; frameborder=&#x27;0&#x27; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;&#x3C;/responsive-block&#x3E;</code>
-    </p>
+[5.7,   2018,   "我家徒弟又挂了"],
+[7.6,   2018,   "人不彪悍枉少年"],
+[6.4,   2018,   "罪案心理小组X"],
 
-    <p> Here is an example of a map made from Python's <code>folium</code> library. It is the original hi-fi version of the raster image used in <a href="https://mp.weixin.qq.com/s/aFfa7WlyT0vwXBlDYvacCg">this blog post</a>. Although the following one is
-        not interactive or animated, you can easily make it so from the <code>folium</code> library. </p>
+[7.4,   2018,   "古董局中局"],
 
-    <responsive-block>
-        <iframe src='charts/openrice-sichuan-food/map.html' frameborder='0' allowfullscreen>
-        </iframe>
-    </responsive-block>
+];
 
-    <p>
-        Following is an animated and interactive map of Sichuan's earthquake in past 100 years. It is made by D3. The project includes many auxiliary files to make the chart work. We'd like to show you that the responsive block works with not only charts on your
-        local disk, but also charts (more precisely HTML pages) from the Internet. Note, in the "src" attribute, <strong>please start your URL with "//"</strong>, not "http", or "https". This notation lets the browser determine which protocol
-        to use and improves compatibility.
-    </p>
+var schema = [
+      {name: 'douban', index: 0, text: 'Douban Score'},
+    {name: 'year', index: 1, text: 'Year'},
+   
+   {name: 'naming', index: 2, text: 'Name'},
+   
+];
 
-    <responsive-block>
-        <iframe src='https://infogram.com/world-map-icon-1h8j4xnoxy0p2mv?live' frameborder='0' allowfullscreen>
-        </iframe>
-    </responsive-block>
 
-    <p>
-        Note that the default aspect ratio is 16:9. Sometimes, 1:1 may look better on a vertical screen. Or, you can try 4:3, whose code is available in HTML comment block. Other aspect ratios are not suggested since this is a starter's template.
-    </p>
+var itemStyle = {
+    normal: {
+        opacity: 0.8,
+        shadowBlur: 10,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowColor: 'rgba(0, 0, 0, 0.5)'
+    }
+};
 
-    <ratio-1-to-1>
-        <responsive-block>
-            <iframe src='//hupili.net/20170800-sichuan-earthquake-in-100years/' frameborder='0' allowfullscreen>
-        </iframe>
-        </responsive-block>
-    </ratio-1-to-1>
-
-    <!-- 
-    <ratio-4-to-3>
-        <responsive-block>
-            <iframe src='//hupili.net/20170800-sichuan-earthquake-in-100years/' frameborder='0' allowfullscreen>
-            </iframe>
-        </responsive-block>
-    </ratio-4-to-3> 
-    -->
-
-    <h2>This page on desktop?</h2>
-
-    <p>It does not use up the entire space on a desktop computer. However it is still readable. Now that 80% traffic is on mobile web, this should suffice for most web stories. Also note that, you just learned HTML 10 minutes ago and this is what you can
-        make.
-    </p>
-
-    <h2>Epilogue</h2>
-
-    <p>Have fun.</p>
-
-    <p>Find the GitHub repo <a href="https://github.com/hupili/big-road">here</a>.</p>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37311363-17"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
+option = {
+    backgroundColor: '#404a59',
+    color: [
+        '#dd4444', '#fec42c', '#80F1BE'
+    ],
+    legend: {
+        y: 'top',
+        data: ['On TV', 'On Internet'],
+        textStyle: {
+            color: '#fff',
+            fontSize: 8
         }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-37311363-17');
-    </script>
-
+    },
+    grid: {
+        x: '10%',
+        x2: 150,
+        y: '18%',
+        y2: '10%'
+    },
+    tooltip: {
+        padding: 10,
+        backgroundColor: '#222',
+        borderColor: '#777',
+        borderWidth: 1,
+        formatter: function (obj) {
+            var value = obj.value;
+            return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                + value[2] 
+                
+                + '</div>'
+                + schema[0].text + '：' + value[0] + '<br>'
+               
+              
+        }
+    },
+    xAxis: {
+        type: 'value',
+        name: 'Douban Score',
+        nameGap: 16,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 8
+        },
+       min:2,
+       max:9,
+        splitLine: {
+            lineStyle: {
+                type: 'dashed'
+            }
+        },
+      
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        }
+    },
+   yAxis: {
+        type: 'value',
+        name: 'Year',
+        nameLocation: 'end',
+        nameGap: 20,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 8
+        },
+        max:2019,
+        min:2015,
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        },
+        splitLine: {
+            show: false
+        }
+    },
+       
+    
+    series: [
+        {
+            name: 'On TV',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataBJ
+        },
+        {
+            name: 'On Internet',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataSH
+        },
+       
+    ]
+};
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+<p><strong>Online IP drama</strong> also has excellent work as <strong>TV drama</strong>. The common problem is that the number of excellent work is still small and the quality of IP drama needs to be improved.</p>
+<footer>
+  <p>Posted by: Ray Liu</p>
+  <p>Course Website: <a href="http://datavis.studio/">http://datavis.studio/</a>.</p>
+</footer>
 </body>
 
 </html>
