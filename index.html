@@ -11,10 +11,11 @@
             text-align: center;
             position: fixed;
             top: 0;
+            left: 0;
             background-color: wheat;
             margin: 0;
             width: 100%;
-            padding: 10px;
+            padding: 15px;
         }
         
         h2 {
@@ -24,15 +25,91 @@
         #space {
             margin: 5em
         }
+        
+        @media (min-width:400px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width:700px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+        .photo {
+            min-width: 100px;
+            min-height: 100px;
+            background-color: antiquewhite;
+            border: lightblue 1px solid;
+            margin: 5px;
+        }
     </style>
 </head>
 
 <body>
     <h1>Ray's portfolio</h1>
+
     <div id="space">
     </div>
+
     <h2>Introduction</h2>
+    <style>
+        .headshot {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .profile1,
+        .profile2 {
+            background-color: blueviolet;
+            margin: 2px;
+        }
+        
+        @media (min-width: 800px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "p1 hs p2";
+                /* prettier-ignore */
+            }
+            .headshot {
+                grid-area: hs;
+            }
+            .profile1 {
+                grid-area: p1;
+            }
+            .profile2 {
+                grid-area: p2;
+            }
+        }
+    </style>
+
+    <div id="begin">
+        <div class="headshot">headshot</div>
+        <div class="profile1">profile 1</div>
+        <div class="profile2">profile 2</div>
+    </div>
     <p>Hi everyone. I'm Ray, 22 (but look younger). I took a data visualisation theory course before. But still I think practice is more important. Data journalism is quite a new area. Hope I will learn more from you all~</p>
+
+    <div class="container">
+        <div class="photo">photo</div>
+        <div class="photo">Photo</div>
+        <div class="photo">Photo</div>
+        <div class="photo">Photo</div>
+        <div class="photo">Photo</div>
+        <div class="photo">Photo</div>
+    </div>
+
     <h2>Project</h2>
     <ul>
         <li><a href="hw1/">My homework1</a></li>
