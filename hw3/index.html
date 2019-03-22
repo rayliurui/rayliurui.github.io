@@ -5,14 +5,20 @@
 
     <script>
         $(function() {
-
+            $('.ui.slider')
+                .slider({
+                    min: 0,
+                    max: 10,
+                    start: 3.82,
+                    step: 0
+                });
             $('.ui.dropdown')
                 .dropdown();
         });
     </script>
     <style>
         body {
-            font-size: 20px;
+            font-size: 100px;
             margin: 0;
             padding: 0;
             background-color: rgb(250, 250, 250);
@@ -23,6 +29,42 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
+        input {
+            width: 120px
+        }
+        
+        @media (min-width:700px) {
+            body {
+                font-size: 35px
+            }
+            input {
+                width: 100px
+            }
+        }
+        
+        @media (min-width:1000px) {
+            body {
+                font-size: 25px
+            }
+            input {
+                width: 80px
+            }
+            #t {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "t1 t2";
+                /* prettier-ignore */
+            }
+            .t1 {
+                grid-area: t1;
+            }
+            .t2 {
+                grid-area: t2;
+            }
+        }
     </style>
 
 </head>
@@ -30,9 +72,9 @@
 <body>
     <h1 style="text-align: center; font-size:2em">Are You Sleepy </h1>
 
-    <p style="width: 70%; margin-left:auto; margin-right:auto">March 22nd is World Sleep Day. According to survey data, more than 300 million Chinese have sleep disorders, and the incidence of insomnia among adults is as high as 38.2%. In addition, more than 60% of the post-90s generation feel that they don't
+    <p style="max-width: 85%;margin-left:auto; margin-right:auto">March 21st is World Sleep Day. According to survey data, more than 300 million Chinese have sleep disorders, and the incidence of insomnia among adults is as high as 38.2%. In addition, more than 60% of the post-90s generation feel that they don't
         get enough sleep, and more than 60% of teenagers and children sleep less than 8 hours.</p>
-
+    <p style="max-width: 85%;margin-left:auto; margin-right:auto">Take a look at how long do you sleep.</p>
     <br>
     <div class="container">
         <div>
@@ -47,19 +89,21 @@
           </select>
         </div>
         <br>
-        <div>Time For Bed:
-            <div class="ui mini input">
-                <input type="number" id="sth">
+        <div id="t">
+            <div class="t1">
+                Time For Bed:
+                <div class="ui mini input">
+                    <input type="number" id="sth">
+                </div>
+                :
+                <div class="ui mini input">
+                    <input type="number" id="stm">
+                </div>
             </div>
-            :
-            <div class="ui mini input">
-                <input type="number" id="stm">
-            </div>
-
-
-            <div> </div>
             <br>
-            <div>Time For Waking Up:
+
+            <div class="t2">
+                Time For Waking Up:
                 <div class="ui mini input">
                     <input type="number" id="wth">
                 </div>
@@ -69,42 +113,42 @@
                 </div>
 
             </div>
+        </div>
 
-            <br> Your sleep time is
-            <div class="ui transparent input">
-                <input id="r1" type="number" placeholder="0" disabled> hs
-                <input id="r2" type="number" placeholder="0" disabled>mins
-            </div>
+        <br> Your sleep time is
+        <div class="ui transparent input">
+            <input id="r1" type="number" placeholder="0" disabled> hs
+            <input id="r2" type="number" placeholder="0" disabled>mins
+        </div>
 
-            <script>
-                function calculate() {
+        <script>
+            function calculate() {
 
-                    a = +document.getElementById("sth").value
-                    b = +document.getElementById("stm").value
-                    c = +document.getElementById("wth").value
-                    d = +document.getElementById("wtm").value
+                a = +document.getElementById("sth").value
+                b = +document.getElementById("stm").value
+                c = +document.getElementById("wth").value
+                d = +document.getElementById("wtm").value
 
-                    if (a > 12) {
-                        e = (1440 - 60 * a - b + 60 * c + d) / 60
-                        r1 = Math.floor(e)
-                        r2 = 60 * e - 60 * r1
-                    } else {
-                        e = (60 * c + d - 60 * a - b) / 60
-                        r1 = Math.floor(e)
-                        r2 = 60 * e - 60 * r1
-                    }
-
-                    document.getElementById("r1").value = r1
-                    document.getElementById("r2").value = r2
-
+                if (a > 12) {
+                    e = (1440 - 60 * a - b + 60 * c + d) / 60
+                    r1 = Math.floor(e)
+                    r2 = 60 * e - 60 * r1
+                } else {
+                    e = (60 * c + d - 60 * a - b) / 60
+                    r1 = Math.floor(e)
+                    r2 = 60 * e - 60 * r1
                 }
 
-                document.getElementById("sth").addEventListener('keyup', calculate)
-                document.getElementById("stm").addEventListener('keyup', calculate)
-                document.getElementById("wth").addEventListener('keyup', calculate)
-                document.getElementById("wtm").addEventListener('keyup', calculate)
-            </script>
-        </div>
+                document.getElementById("r1").value = r1
+                document.getElementById("r2").value = r2
+
+            }
+
+            document.getElementById("sth").addEventListener('keyup', calculate)
+            document.getElementById("stm").addEventListener('keyup', calculate)
+            document.getElementById("wth").addEventListener('keyup', calculate)
+            document.getElementById("wtm").addEventListener('keyup', calculate)
+        </script>
 
 
     </div>
