@@ -2,7 +2,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         $(function() {
             $('.ui.slider')
@@ -18,10 +18,11 @@
     </script>
     <style>
         body {
-            font-size: 100px;
+            font-size: 25px;
             margin: 0;
             padding: 0;
             background-color: rgb(250, 250, 250);
+            width: 100%
         }
         
         .container {
@@ -31,25 +32,10 @@
         }
         
         input {
-            width: 120px
-        }
-        
-        @media (min-width:700px) {
-            body {
-                font-size: 35px
-            }
-            input {
-                width: 100px
-            }
+            width: 80px
         }
         
         @media (min-width:1000px) {
-            body {
-                font-size: 25px
-            }
-            input {
-                width: 80px
-            }
             #t {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -71,10 +57,11 @@
 
 <body>
     <h1 style="text-align: center; font-size:2em">Are You Sleepy </h1>
-
-    <p style="max-width: 85%;margin-left:auto; margin-right:auto">March 21st is World Sleep Day. According to survey data, more than 300 million Chinese have sleep disorders, and the incidence of insomnia among adults is as high as 38.2%. In addition, more than 60% of the post-90s generation feel that they don't
-        get enough sleep, and more than 60% of teenagers and children sleep less than 8 hours.</p>
-    <p style="max-width: 85%;margin-left:auto; margin-right:auto">Take a look at how long do you sleep.</p>
+    <div style="margin-left:7.5%;margin-right:7.5%">
+        <p>March 21st is World Sleep Day. According to survey data, more than 300 million Chinese have sleep disorders, and the incidence of insomnia among adults is as high as 38.2%. In addition, more than 60% of the post-90s generation feel that they don't
+            get enough sleep, and more than 60% of teenagers and children sleep less than 8 hours.</p>
+        <p>Take a look at how long do you sleep.</p>
+    </div>
     <br>
     <div class="container">
         <div>
