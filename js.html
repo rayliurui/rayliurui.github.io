@@ -1,0 +1,32 @@
+<head>
+
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <p>This is a paragraph.</p>
+    Num1:<input id="num1" type="number" value="100"> Num2:
+    <input id="num2" type="number" value="900">
+    <br>
+    <button id="cal">Calculate</button>
+    <br> Result:
+    <input id="result" type="number">
+    <script>
+        function calculate() {
+
+            a = +document.getElementById("num1").value
+            b = +document.getElementById("num2").value
+            result = a + b
+                // 另一个Conversion方案：result = (+a) + (+b)
+            document.getElementById("result").value = result
+
+        }
+        document.getElementById("cal").addEventListener('click', calculate)
+        document.getElementById("num1").addEventListener('keyup', calculate)
+        document.getElementById("num2").addEventListener('keyup', calculate)
+
+        //重复动作放function, Steps:1.get input(assignment) 2.do the calculation 3. action
+        // console.log('this message')
+        // console.log(a + b)
+    </script>
+</body>
