@@ -56,9 +56,18 @@
             color: cornsilk
         }
         
+        #biao {
+            width: 80%;
+            height: 20%
+        }
+        
         @media (min-width:600px) {
             cover-image h1 {
                 font-size: 60px;
+            }
+            #biao {
+                width: 60%;
+                height: 60%
             }
         }
         
@@ -79,6 +88,11 @@
             }
             cover-image h1 {
                 font-size: 80px;
+            }
+            #biao {
+                width: 50%;
+                height: 30%"
+
             }
         }
     </style>
@@ -168,59 +182,90 @@
             document.getElementById("wth").addEventListener('keyup', calculate)
             document.getElementById("wtm").addEventListener('keyup', calculate)
         </script>
-
-        <!-- <div id="biao" style="width: 500px;height:300px"> </div>
+        <div></div>
+        <br>
+        <center>
+            <div id="biao"> </div>
+        </center>
         <script type="text/javascript" src="echarts.min.js"></script>
-
         <script type="text/javascript">
             var myCharts = echarts.init(document.getElementById('biao'));
             var option = {
-
-                grid: {
-                    containLabel: true,
-                    left: 20
-                },
-                xAxis: {
-                    data: ['12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+                title: {
+                    text: 'Sleep time of different generations',
+                    x: 'center',
+                    subtext: 'Source: 2019 China Sleep Index Report',
                 },
 
-                yAxis: {
-
-                    data: ['1950s', '1960s', '1970s', '1980s', '1990s', '2000s']
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                    },
+                },
+                calculable: false,
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
 
                 },
+                calculable: true,
+                yAxis: [{
+                    type: 'category',
+                    data: ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s"]
+                }],
+                xAxis: [{
+                    type: 'value'
 
-                series: [
-
-                    {
-                        name: '实际开始时间',
-                        type: 'bar',
-                        stack: 'test2',
-                        itemStyle: {
-                            normal: {
-                                color: 'rgba(0,0,0,0)'
-                            }
+                }],
+                series: [{
+                    name: "22时+",
+                    type: "bar",
+                    stack: "总",
+                    itemStyle: {
+                        normal: {
+                            barBorderColor: 'rgba(0,0,0,0)',
+                            color: 'rgba(0,0,0,0)'
                         },
-                        data: [
-                            '10', '11', '12'
-                        ]
-                    }, {
-                        name: '实际时间',
-                        type: 'bar',
-                        stack: 'test2',
-                        //修改地方3
-                        itemStyle: {
-                            normal: {
-                                color: '#A2E068'
-                            }
-                        },
-                        data: [
-                            '6', '7', '8'
-                        ]
-                    }
-                ]
+                        emphasis: {
+                            barBorderColor: 'rgba(0,0,0,0)',
+                            color: 'rgba(0,0,0,0)'
+                        }
+                    },
+                    data: [0.17, 0.58, 0.61, 0.62, 0.8, 0.42]
+                }, {
+                    name: "1950s",
+                    type: "bar",
+                    stack: "总",
+                    data: [6.76, 0, 0, 0, 0, 0, 0]
+                }, {
+                    name: "1960s",
+                    type: "bar",
+                    stack: "总",
+                    data: [0, 6.97, 0, 0, 0, 0, 0]
+                }, {
+                    name: "1970s",
+                    type: "bar",
+                    stack: "总",
+                    data: [0, 0, 7.03, 0, 0, 0, 0]
+                }, {
+                    name: "1980s",
+                    type: "bar",
+                    stack: "总",
+                    data: [0, 0, 0, 7.04, 0, 0, 0]
+                }, {
+                    name: "1990s",
+                    type: "bar",
+                    stack: "总",
+                    data: [0, 0, 0, 0, 7.13, 0, 0]
+                }, {
+                    name: "2000s",
+                    type: "bar",
+                    stack: "总",
+                    data: [0, 0, 0, 0, 0, 7.26, 0]
+                }]
             };
             myCharts.setOption(option);
         </script>
--->
+
 </body>
