@@ -204,6 +204,127 @@
 
 
     </div>
+    <div id='mychart1'></div>
+    <div id='mychart2'></div>
+    <script src="highcharts/code/highcharts.js"></script>
+    <script src="highcharts/code/modules/exporting.js"></script>
+    <script src="highcharts/code/modules/export-data.js"></script>
+    <script type="text/javascript">
+        Highcharts.chart('mychart1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
 
+            },
+            title: {
+                text: 'My Ability'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Chrome',
+                    y: 61.41,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Internet Explorer',
+                    y: 11.84
+                }, {
+                    name: 'Firefox',
+                    y: 10.85
+                }, {
+                    name: 'Edge',
+                    y: 4.67
+                }, {
+                    name: 'Safari',
+                    y: 4.18
+                }, {
+                    name: 'Sogou Explorer',
+                    y: 1.64
+                }, {
+                    name: 'Opera',
+                    y: 1.6
+                }, {
+                    name: 'QQ',
+                    y: 1.2
+                }, {
+                    name: 'Other',
+                    y: 2.61
+                }]
+            }]
+        });
+    </script>
+    <script type="text/javascript">
+        Highcharts.chart('mychart2', {
+
+            title: {
+                text: 'Solar Employment Growth by Sector, 2010-2016'
+            },
+
+            subtitle: {
+                text: 'Source: thesolarfoundation.com'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Number of Employees'
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2010
+                }
+            },
+
+            series: [{
+                name: 'Installation',
+                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    </script>
     <footer>Contact: 18504825@life.hkbu.edu.hk</footer>
 </body>
