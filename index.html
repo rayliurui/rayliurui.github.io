@@ -126,6 +126,20 @@
             .pic {
                 grid-area: pic;
             }
+            .charts {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "chart1 chart2";
+                /* prettier-ignore */
+            }
+            #mychart1 {
+                grid-area: chart1;
+            }
+            #mychart2 {
+                grid-area: chart2;
+            }
             .intro {
                 padding: 0;
                 height: 300px;
@@ -188,7 +202,12 @@
             </a>
             <p style="font-size:15px; text-align:center ">Are You Sleepy</p>
         </div>
-        <div class="project "></div>
+        <div class="project ">
+            <a href="rayliurui.github.io/hw4">
+                <img src="hw4/cover.jpg " style="width:300px ">
+            </a>
+            <p style="font-size:15px; text-align:center ">Criticise the Visuals<br>Chinese Candidates for Oscar</p>
+        </div>
 
     </div>
 
@@ -204,22 +223,28 @@
 
 
     </div>
-    <div id='mychart1'></div>
-    <div id='mychart2'></div>
+    <br>
+    <h2>Assessment</h2>
+    <div class="charts" style="margin-left:9%;margin-right:9%;margin-top:0">
+        <div id='mychart1'></div>
+        <div id='mychart2'></div>
+    </div>
+
     <script src="highcharts/code/highcharts.js"></script>
     <script src="highcharts/code/modules/exporting.js"></script>
     <script src="highcharts/code/modules/export-data.js"></script>
     <script type="text/javascript">
         Highcharts.chart('mychart1', {
             chart: {
-                plotBackgroundColor: null,
+
+                backgroundColor: '#FAFAFA',
                 plotBorderWidth: null,
                 plotShadow: false,
                 type: 'pie',
 
             },
             title: {
-                text: 'My Ability'
+                text: 'My Abilities'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -238,51 +263,49 @@
                 }
             },
             series: [{
-                name: 'Brands',
+                name: 'abilities',
                 colorByPoint: true,
                 data: [{
-                    name: 'Chrome',
-                    y: 61.41,
+                    name: 'Interviewing',
+                    y: 20,
                     sliced: true,
                     selected: true
                 }, {
-                    name: 'Internet Explorer',
-                    y: 11.84
+                    name: 'Writing',
+                    y: 10
                 }, {
-                    name: 'Firefox',
-                    y: 10.85
+                    name: 'Editing',
+                    y: 15
                 }, {
-                    name: 'Edge',
-                    y: 4.67
+                    name: 'Photographing and filming',
+                    y: 20
                 }, {
-                    name: 'Safari',
-                    y: 4.18
+                    name: 'Language(English and Janpanese)',
+                    y: 20
                 }, {
-                    name: 'Sogou Explorer',
-                    y: 1.64
-                }, {
-                    name: 'Opera',
-                    y: 1.6
-                }, {
-                    name: 'QQ',
-                    y: 1.2
-                }, {
-                    name: 'Other',
-                    y: 2.61
+                    name: 'Painting and Designing',
+                    y: 15
                 }]
             }]
         });
     </script>
     <script type="text/javascript">
         Highcharts.chart('mychart2', {
-
+            chart: {
+                backgroundColor: '#FAFAFA',
+            },
             title: {
                 text: 'GPA in GDUFS'
             },
             yAxis: {
+                tickPositions: [0, 1, 2, 3, 4],
                 title: {
                     text: 'GPA'
                 }
+            },
+            xAxis: {
+                type: 'category',
+                categories: ['2016-2017-1', '2016-2017-2', '2017-2018-1', '2017-2018-2', '2018-2019-1']
             },
             legend: {
                 layout: 'vertical',
@@ -290,18 +313,11 @@
                 verticalAlign: 'middle'
             },
 
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: 2016
-                }
-            },
 
             series: [{
-                name: 'Installation',
-                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+                name: 'GPA',
+                showInLegend: false,
+                data: [3.77, 3.83, 3.71, 3.88, 3.75]
             }],
 
             responsive: {
@@ -321,5 +337,6 @@
 
         });
     </script>
-    <footer>Contact: 18504825@life.hkbu.edu.hk</footer>
+
+    <footer style="margin-top:6%">Contact: 18504825@life.hkbu.edu.hk<br>Class page <a href="http://datavis.studio/">HKBU Data Viz</a></footer>
 </body>
