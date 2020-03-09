@@ -1,24 +1,25 @@
 <head>
     <title>Ray's Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="css/flickity-docs.css" media="screen">
+
     <style>
         body {
             font-size: 24px;
             margin: 0;
             padding: 0;
             background-color: rgb(250, 250, 250);
-            width: 100%
+            width: 100%;
         }
         
         h1 {
             color: black;
-            font-size: 15px;
-            font-family: "segoepr";
+            font-size: 20px;
+            font-family: "苏新诗柳楷简";
             text-align: center;
             position: fixed;
             margin: 0;
-            padding: 10px;
+            padding: 5%;
             top: 0;
             left: 0;
             right: 0;
@@ -26,317 +27,132 @@
         }
         
         @font-face {
-            font-family: "segoepr";
-            src: url('font/segoepr.ttf') format('truetype');
+            font-family: "苏新诗柳楷简";
+            src: url('font/苏新诗柳楷简.ttf') format('truetype');
         }
         
-        h2 {
-            font-family: "segoepr";
+        .works {
+            width: 100%;
             text-align: center;
-            width: 100%
+            margin-top: 15%;
+        }
+        
+        .work {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-left: 3px solid black;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "intro pic";
         }
         
         .intro {
-            padding-bottom: 10px;
             width: 100%;
-            margin: 10px
         }
         
         .pic {
-            margin: 5px;
-            margin-top: 50px;
-        }
-        
-        .photos {
             width: 100%;
-            text-align: center;
-            margin-top: 0;
         }
         
-        .photo {
-            min-width: 280px;
-            margin: 10px;
+        .slider {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-left: 3px solid black;
+            padding: 0;
         }
         
-        .projects {
+        .foot {
             width: 100%;
-            text-align: center;
-            margin-top: 0;
+            position: fixed;
+            height: 6%;
+            top: 94%;
+            background-color: rgb(250, 250, 250);
         }
         
-        .project {
-            min-width: 280px;
-            margin: 10px;
-        }
-        
-        @media (min-width:700px) {
-            .photos {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            .projects {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            #begin {
-                margin: 10%;
-            }
-            .intro {
-                padding-left: 10%;
-                padding-top: 50px;
-                padding-bottom: 100px;
-                height: 300px;
-                width: 500px
-            }
-            .photos {
-                margin-top: 0;
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto
-            }
-            .photo {
-                min-width: 120px;
-                margin: 20px;
-                padding: 0
-            }
-            .projects {
-                margin-top: 0;
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto
-            }
-            .project {
-                min-width: 120px;
-                margin: 20px;
-            }
-        }
-        
-        @media (min-width:1000px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore */
-                "intro pic";
-                /* prettier-ignore */
-            }
-            .intro {
-                grid-area: intro;
-            }
-            .pic {
-                grid-area: pic;
-            }
-            .charts {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore */
-                "chart1 chart2";
-                /* prettier-ignore */
-            }
-            #mychart1 {
-                grid-area: chart1;
-            }
-            #mychart2 {
-                grid-area: chart2;
-            }
-            .intro {
-                padding: 0;
-                height: 300px;
-                width: 500px
-            }
-            .photos {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            .projects {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-        
-        footer {
+        .footer {
             font-size: 10px;
-            background-color: black;
-            color: white;
-            padding: 5px;
+            color: black;
             text-align: center;
-            left: 0;
-            right: 0;
+            width: 80%;
+            border-top: 3px solid black;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 
 <body>
 
-    <h1 class="animated bounceIn">Ray's portfolio</h1>
+
+    <h1>刘芮的作品集</h1>
+    <div class="works ">
+
+        <div class="work ">
+            <a href="w1.html">
+                <div class="intro"><img src="images/c1.JPG" style="width:100% "></div>
+            </a>
+            <div class="pic">
+                <p style="font-size:10px">深度报道作品</p>
+                <p style="font-size:15px"><strong>恩宁路改造之困</strong></p>
+                <p style="font-size:10px">记者/摄影</p>
+            </div>
+
+        </div>
+        <div class="work ">
+
+            <div class="intro">
+                <p style="font-size:10px">新闻编译作品</p>
+                <p style="font-size:15px"><strong>澳洲房产热“变天”</strong></p>
+                <p style="font-size:10px">编译</p>
+            </div>
+            <a href="w2.html">
+                <div class="pic"><img src="images/c2.jpg" style="width:100% "></div>
+            </a>
+        </div>
+        <div class="work ">
+            <a href="w4.html">
+                <div class="intro"><img src="images/c3.jpg" style="width:100% "></div>
+            </a>
+            <div class="pic">
+                <p style="font-size:10px">数据可视化作业</p>
+                <p style="font-size:15px"><strong>盘一盘近五年的国产IP剧</strong></p>
+                <p style="font-size:10px">图表设计</p>
+            </div>
+            <br>
+
+        </div>
 
 
-    <div id="begin">
-        <div class="pic">
-            <center>
-                <img src="images/tu.png" style="width:300px">
-            </center>
+        <div class="slider" style="font-size:15px">
+
+            <p style="margin:0px">摄影作品</p>
+
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": false,"pageDots":false	 }' style="margin:0">
+                <img src="images/2.jpg " style="width:100% ">
+                <img src="images/3.jpg " style="width:100% " />
+                <img src="images/4.jpg " style="width:100% ">
+                <img src="images/5.jpg " style="width:100% ">
+                <img src="images/6.jpg " style="width:100% ">
+            </div>
+
         </div>
-        <div class=" intro ">
-            <h2 style="text-align:left ">Hi, I'm Ray</h2>
-            <p>I'm a third-year college student majoring in Journalism. Now I'm studying at Hong Kong Baptist University.</p>
-            <p>I love designing and have a great interest in coding. I enjoy the feeling of creation. Also I'm good listener.</p>
-        </div>
+
+
+
 
 
     </div>
 
-    <h2>Projects</h2>
-
-    <div class="projects ">
-        <div class="project ">
-            <a href="rayliurui.github.io/hw1 ">
-                <img src="hw1/images/cover.jpg " style="width:300px ">
-            </a>
-            <p style="font-size:15px; text-align:center ">Chinese IP drama</p>
-        </div>
-        <div class="project ">
-            <a href="rayliurui.github.io/hw3">
-                <img src="hw3/images/cover.jpg " style="width:300px ">
-            </a>
-            <p style="font-size:15px; text-align:center ">Are You Sleepy</p>
-        </div>
-        <div class="project ">
-            <a href="rayliurui.github.io/hw4">
-                <img src="hw4/cover.jpg " style="width:300px ">
-            </a>
-            <p style="font-size:15px; text-align:center ">Criticise the Visuals<br>Chinese Candidates for Oscar</p>
-        </div>
-
-    </div>
-
-    <h2>Photographs</h2>
-
-    <div class="photos ">
-        <div class="photo "><img src="images/1.jpg.JPG " style="width:300px "></div>
-        <div class="photo "><img src="images/2.jpg " style="width:300px "></div>
-        <div class="photo "><img src="images/3.jpg " style="width:300px "></div>
-        <div class="photo "><img src="images/4.jpg " style="width:300px "></div>
-        <div class="photo "><img src="images/5.jpg " style="width:300px "></div>
-        <div class="photo "><img src="images/6.jpg " style="width:300px "></div>
-
-
-    </div>
+    <script src="js/flickity-docs.min.js"></script>
     <br>
-    <h2>Assessment</h2>
-    <div class="charts" style="margin-left:9%;margin-right:9%;margin-top:0">
-        <div id='mychart1'></div>
-        <div id='mychart2'></div>
+
+
+
+    <div class="foot">
+        <div class="footer"> rayjournalist2020@outlook.com</div>
+
     </div>
 
-    <script src="highcharts/code/highcharts.js"></script>
-    <script src="highcharts/code/modules/exporting.js"></script>
-    <script src="highcharts/code/modules/export-data.js"></script>
-    <script type="text/javascript">
-        Highcharts.chart('mychart1', {
-            chart: {
 
-                backgroundColor: '#FAFAFA',
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'pie',
-
-            },
-            title: {
-                text: 'My Abilities'
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                        }
-                    }
-                }
-            },
-            series: [{
-                name: 'abilities',
-                colorByPoint: true,
-                data: [{
-                    name: 'Interviewing',
-                    y: 20,
-                    sliced: true,
-                    selected: true
-                }, {
-                    name: 'Writing',
-                    y: 10
-                }, {
-                    name: 'Editing',
-                    y: 15
-                }, {
-                    name: 'Photographing and filming',
-                    y: 20
-                }, {
-                    name: 'Language(English and Janpanese)',
-                    y: 20
-                }, {
-                    name: 'Painting and Designing',
-                    y: 15
-                }]
-            }]
-        });
-    </script>
-    <script type="text/javascript">
-        Highcharts.chart('mychart2', {
-            chart: {
-                backgroundColor: '#FAFAFA',
-            },
-            title: {
-                text: 'GPA in GDUFS'
-            },
-            yAxis: {
-                tickPositions: [0, 1, 2, 3, 4],
-                title: {
-                    text: 'GPA'
-                }
-            },
-            xAxis: {
-                type: 'category',
-                categories: ['2016-2017-1', '2016-2017-2', '2017-2018-1', '2017-2018-2', '2018-2019-1']
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle'
-            },
-
-
-            series: [{
-                name: 'GPA',
-                showInLegend: false,
-                data: [3.77, 3.83, 3.71, 3.88, 3.75]
-            }],
-
-            responsive: {
-                rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
-                    }
-                }]
-            }
-
-        });
-    </script>
-
-    <footer style="margin-top:6%">Contact: 18504825@life.hkbu.edu.hk<br>Class page <a href="http://datavis.studio/">HKBU Data Viz</a></footer>
 </body>
