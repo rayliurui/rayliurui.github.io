@@ -11,9 +11,25 @@ $(document).ready(function() {
                     show: true,
                     data: ['1.21', '1.22', '1.23', '1.24', '1.25', '1.26', '1.27', '1.28', '1.29', '1.3', '1.31', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6', '2.7', '2.8', '2.9', '2.10', '2.11', '2.12', '2.13', '2.14', '2.15', '2.16', '2.17', '2.18', '2.19', '2.20', '2.21', '2.22', '2.23', '2.24', '2.25', '2.26', '2.27', '2.28', '2.29', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '3.11'],
                     playInterval: 800,
-                    lineStyle: false,
+                    lineStyle: 'none',
                     label: { show: false },
-                    controlStyle: { itemSize: 30 }
+                    controlStyle: {
+                        itemSize: 30,
+                        showPrevBtn: false,
+                        showNextBtn: false,
+                        color: '#e3f2fd',
+                        borderColor: '#e3f2fd'
+                    },
+                    top: '70%',
+                    right: '10%',
+                    controlPosition: 'right'
+                },
+                title: {
+
+                    textStyle: {
+                        color: '#424242',
+
+                    }
                 },
                 tooltip: {
                     trigger: 'item',
@@ -22,12 +38,12 @@ $(document).ready(function() {
                 visualMap: {
                     min: 0,
                     max: 10,
-
+                    show: false,
                     left: 'right',
-                    realtime: false,
+                    realtime: true,
                     calculable: true,
                     inRange: {
-                        color: ['#fff', '#d50000']
+                        color: ['#e3f2fd', '#d50000']
                     }
 
                 },
@@ -46,7 +62,7 @@ $(document).ready(function() {
                         emphasis: {
                             show: true,
                             textStyle: {
-                                color: '#333'
+                                color: '#ffd54f'
                             }
                         }
                     },
@@ -90,7 +106,10 @@ $(document).ready(function() {
                     }]
                 },
                 { //op2
-                    title: { text: '1月22日' },
+                    title: {
+                        text: '1月22日',
+
+                    },
                     series: [{
                         data: [
 

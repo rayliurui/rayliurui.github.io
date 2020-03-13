@@ -7,21 +7,78 @@
     <script src='jquery.min.js' charset="utf-8"></script>
     <script src='echarts/echarts.js' charset="utf-8"></script>
     <script src='index.js' charset="utf-8"></script>
-    <title>青岛地图</title>
+    <title>青岛疫情</title>
     <style>
-        body {
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(250, 250, 250);
+        responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        ratio-1-to-1 responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 100%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        ratio-4-to-3 responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        responsive-block iframe,
+        responsive-block object,
+        responsive-block embed {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #424242;
+        }
+        
+        #map {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: '黑体';
+            color: #fff;
+            background-color: #42a5f5;
+            margin: 0,
+        }
+        
+        p {
+            text-align: center;
+            margin: 0
         }
     </style>
 </head>
 
 <body>
-    <div id="map" style="width:100% ;height: 100%"></div>
-
+    <h1>青岛疫情</h1>
+    <div id="map" style="width: 350px;height:320px;margin-left: 0;margin-right:0;"></div>
+    <p>青岛现有确诊病例（例）</p>
 </body>
 
 </html>
