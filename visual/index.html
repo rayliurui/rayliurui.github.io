@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src='jquery.min.js' charset="utf-8"></script>
+    <script src='echarts/echarts.js' charset="utf-8"></script>
+
+    <title>青岛地图</title>
+</head>
+
+<body>
+    <div id="map" style="width:600px;height: 700px;margin: 0 auto"></div>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+
+            $.get('qd.json', function(geoJson) {
+                echarts.registerMap('qd', geoJson, {});
+                var myChart = echarts.init(document.getElementById('map'));
+                var option = {
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{b}<br/>{c} (p / km2)'
+                    },
+                    visualMap: {
+                        min: 0,
+                        max: 60,
+                        text: ['High', 'Low'],
+                        left: 'right',
+                        realtime: false,
+                        calculable: true,
+                        inRange: {
+                            color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8']
+                        }
+                    },
+                    series: [{
+                        name: '西城',
+                        type: 'map',
+                        mapType: 'qd',
+                        aspectScale: 0.85, //地图长度比
+                        label: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    color: '#333'
+                                }
+                            }
+                        },
+                        data: [
+                            [{
+                                name: '城阳区',
+                                value: 0
+                            }, {
+                                name: '李沧区',
+                                value: 0
+                            }, {
+                                name: '崂山区',
+                                value: 0
+                            }, {
+                                name: '市南区',
+                                value: 1
+                            }, {
+                                name: '市北区',
+                                value: 0
+                            }, {
+                                name: '黄岛区',
+                                value: 0
+                            }, {
+                                name: '胶州市',
+                                value: 0
+                            }, {
+                                name: '平度市',
+                                value: 0
+                            }, {
+                                name: '莱西市',
+                                value: 0
+                            }, {
+                                name: '即墨区',
+                                value: 0
+                            }]
+                        ]
+                    }]
+                };
+                myChart.setOption(option);
+            });
+        });
+    </script>
+</body>
+
+</html>
