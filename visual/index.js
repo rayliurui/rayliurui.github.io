@@ -9,7 +9,7 @@ $(document).ready(function() {
                     bottom: '6%',
                     autoPlay: true,
                     show: true,
-                    data: ['1.21', '1.22', '1.23', '1.24', '1.25', '1.26', '1.27', '1.28', '1.29', '1.3', '1.31', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6', '2.7', '2.8', '2.9', '2.10', '2.11', '2.12', '2.13', '2.14', '2.15', '2.16', '2.17', '2.18', '2.19', '2.20', '2.21', '2.22', '2.23', '2.24', '2.25', '2.26', '2.27', '2.28', '2.29', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '3.11'],
+                    data: ['1.21', '1.22', '1.23', '1.24', '1.25', '1.26', '1.27', '1.28', '1.29', '1.3', '1.31', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6', '2.7', '2.8', '2.9', '2.10', '2.11', '2.12', '2.13', '2.14', '2.15', '2.16', '2.17', '2.18', '2.19', '2.20', '2.21', '2.22', '2.23', '2.24', '2.25', '2.26', '2.27', '2.28', '2.29', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14'],
                     playInterval: 800,
                     lineStyle: 'none',
                     label: { show: false },
@@ -25,10 +25,10 @@ $(document).ready(function() {
                     controlPosition: 'right'
                 },
                 title: {
-
+                    left: '5%',
                     textStyle: {
                         color: '#424242',
-
+                        fontSize: 15
                     }
                 },
                 tooltip: {
@@ -693,16 +693,16 @@ $(document).ready(function() {
                     title: { text: '2月25日' },
                     series: [{
                         data: [
-                            { name: '城阳区', value: 1 },
-                            { name: '李沧区', value: 5 },
-                            { name: '崂山区', value: 3 },
+                            { name: '城阳区', value: 0 },
+                            { name: '李沧区', value: 2 },
+                            { name: '崂山区', value: 2 },
                             { name: '市南区', value: 3 },
-                            { name: '市北区', value: 9 },
-                            { name: '黄岛区', value: 7 },
+                            { name: '市北区', value: 6 },
+                            { name: '黄岛区', value: 4 },
                             { name: '胶州市', value: 0 },
-                            { name: '平度市', value: 1 },
+                            { name: '平度市', value: 0 },
                             { name: '莱西市', value: 2 },
-                            { name: '即墨区', value: 6 }
+                            { name: '即墨区', value: 2 }
                         ],
                     }]
                 },
@@ -945,7 +945,74 @@ $(document).ready(function() {
                     }]
                 },
                 { //op49
-                    title: { text: '3月9日' },
+                    title: { text: '3月11日' },
+                    series: [{
+                        data: [
+                            { name: '城阳区', value: 0 },
+                            { name: '李沧区', value: 0 },
+                            { name: '崂山区', value: 0 },
+                            { name: '市南区', value: 0 },
+                            { name: '市北区', value: 0 },
+                            { name: '黄岛区', value: 0 },
+                            { name: '胶州市', value: 0 },
+                            { name: '平度市', value: 1 },
+                            { name: '莱西市', value: 0 },
+                            { name: '即墨区', value: 0 }
+                        ],
+                    }]
+                },
+                { //op49
+                    title: { text: '3月11日' },
+                    series: [{
+                        data: [
+                            { name: '城阳区', value: 0 },
+                            { name: '李沧区', value: 0 },
+                            { name: '崂山区', value: 0 },
+                            { name: '市南区', value: 0 },
+                            { name: '市北区', value: 0 },
+                            { name: '黄岛区', value: 0 },
+                            { name: '胶州市', value: 0 },
+                            { name: '平度市', value: 1 },
+                            { name: '莱西市', value: 0 },
+                            { name: '即墨区', value: 0 }
+                        ],
+                    }]
+                },
+                { //op49
+                    title: { text: '3月12日' },
+                    series: [{
+                        data: [
+                            { name: '城阳区', value: 0 },
+                            { name: '李沧区', value: 0 },
+                            { name: '崂山区', value: 0 },
+                            { name: '市南区', value: 0 },
+                            { name: '市北区', value: 0 },
+                            { name: '黄岛区', value: 0 },
+                            { name: '胶州市', value: 0 },
+                            { name: '平度市', value: 1 },
+                            { name: '莱西市', value: 0 },
+                            { name: '即墨区', value: 0 }
+                        ],
+                    }]
+                },
+                { //op49
+                    title: { text: '3月13日' },
+                    series: [{
+                        data: [
+                            { name: '城阳区', value: 0 },
+                            { name: '李沧区', value: 0 },
+                            { name: '崂山区', value: 0 },
+                            { name: '市南区', value: 0 },
+                            { name: '市北区', value: 0 },
+                            { name: '黄岛区', value: 0 },
+                            { name: '胶州市', value: 0 },
+                            { name: '平度市', value: 1 },
+                            { name: '莱西市', value: 0 },
+                            { name: '即墨区', value: 0 }
+                        ],
+                    }]
+                }, { //op49
+                    title: { text: '3月14日' },
                     series: [{
                         data: [
                             { name: '城阳区', value: 0 },
