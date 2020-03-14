@@ -234,7 +234,7 @@
 
     <br>
     <p>确诊患者关系</p>
-    <p style="font-size: 12px;text-align:right;">圆点数字代表确诊顺序<br>大小代表接触确诊患者数</p>
+
     <br>
     <div id="people" style="width: 350px;height:410px;margin-left: 0;margin-right:0;padding:0px"></div>
 
@@ -288,7 +288,7 @@
                     layoutAnimation: true
                         //因为力引导布局会在多次迭代后才会稳定，这个参数决定是否显示布局的迭代动画，在浏览器端节点数据较多（>100）的时候不建议关闭，布局过程会造成浏览器假死。                        
                 },
-                roam: true, //是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+                scale: true, //是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
                 nodeScaleRatio: 0.6, //鼠标漫游缩放时节点的相应缩放比例，当设为0时节点不随着鼠标的缩放而缩放
                 draggable: true, //节点是否可拖拽，只在使用力引导布局的时候有用。
                 focusNodeAdjacency: true, //是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点。
@@ -814,13 +814,14 @@
             document.getElementById("main_1").innerHTML = str;
             return str;
         }
-        //var ecConfig = echarts.config; echarts2的获取事件方法，当前为echarts3
+
         myChart.on('mouseover', openOrFold);
     </script>
-
-
+    <p style="font-size: 12px;text-align:right;">（注：圆点数字代表确诊顺序、大小代表接触确诊患者数</p>
+    <br>
     <p style="font-size: 10px;text-align: right;color:#888888">数据收集截止时间：2020年3月14日<br><a href="http://wsjsw.qingdao.gov.cn/n28356065/index.html">数据来源：青岛市卫生健康委员会</a>
     </p>
+    <br>
 </body>
 
 </html>
