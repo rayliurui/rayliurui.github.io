@@ -54,6 +54,13 @@
             width: 100%;
         }
         
+        .slider {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-left: 3px solid black;
+            padding: 0;
+        }
+        
         .foot {
             width: 100%;
             position: fixed;
@@ -80,7 +87,7 @@
     <h1>刘芮的作品集</h1>
     <div class="works ">
 
-        <p style="margin:0px; font-size:15px;text-align: center;margin-top: 16%">（点击图片）</p>
+        <p style="margin:0px; font-size:15px;text-align: center;margin-top: 16%">新闻作品（点击图片）</p>
 
         <div class="work ">
             <a href="w1.html">
@@ -147,20 +154,19 @@
 
 
         </div>
-        <div class="work ">
+        <div class="slider" style="font-size:15px"> <br>
 
-            <div class="intro">
-                <p style="font-size:15px"><br>
-                    <strong>摄影/设计作品</strong></p>
+            <p style="margin:0px">摄影作品</p>
 
-
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": false,"pageDots":false	 }' style="margin:0">
+                <img src="images/2.jpg " style="width:100% ">
+                <img src="images/3.jpg " style="width:100% " />
+                <img src="images/4.jpg " style="width:100% ">
+                <img src="images/5.jpg " style="width:100% ">
+                <img src="images/6.jpg " style="width:100% ">
             </div>
-            <a href="w6.html">
-                <div class="pic"><img src="images/c6.jpg" style="width:100% "></div>
-            </a>
-
+            <script src="js/flickity-docs.min.js"></script>
         </div>
-
 
         <br>
 
